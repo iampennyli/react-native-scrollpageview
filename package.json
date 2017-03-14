@@ -1,0 +1,26 @@
+{
+  "name": "react-native-scrollpageview",
+  "version": "1.0.0",
+  "description": "Native iOS ScrollPageView wrapper for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iampennyli/react-native-scrollpageview.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "UIScrollView",
+    "PagingEnable",
+    "iOS"
+  ],
+  "author": {
+    "name": "pennyli",
+    "email": "cocoamad@gmail.com",
+    "url": "penny.li"
+  },
+  "license": "MIT",
+}
