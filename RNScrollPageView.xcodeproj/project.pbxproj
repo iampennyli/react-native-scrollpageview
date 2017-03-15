@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A830A1AC1E78015C00D36718 /* RNScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A830A1AB1E78015C00D36718 /* RNScrollPageView.m */; };
-		A830A1AD1E78015C00D36718 /* RNScrollPageView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A830A1AA1E78015C00D36718 /* RNScrollPageView.h */; };
-		A830A1B71E78018800D36718 /* RNScrollPageViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A830A1B31E78018800D36718 /* RNScrollPageViewManager.m */; };
-		A830A1B81E78018800D36718 /* RNScrollPageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A830A1B51E78018800D36718 /* RNScrollPageItem.m */; };
+		A830A2861E793FAC00D36718 /* RNScrollPageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A830A2811E793FAC00D36718 /* RNScrollPageItem.m */; };
+		A830A2871E793FAC00D36718 /* RNScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A830A2831E793FAC00D36718 /* RNScrollPageView.m */; };
+		A830A2881E793FAC00D36718 /* RNScrollPageViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A830A2851E793FAC00D36718 /* RNScrollPageViewManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,7 +19,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				A830A1AD1E78015C00D36718 /* RNScrollPageView.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -28,12 +26,12 @@
 
 /* Begin PBXFileReference section */
 		A830A1A71E78015C00D36718 /* libRNScrollPageView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNScrollPageView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A830A1AA1E78015C00D36718 /* RNScrollPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNScrollPageView.h; sourceTree = "<group>"; };
-		A830A1AB1E78015C00D36718 /* RNScrollPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNScrollPageView.m; sourceTree = "<group>"; };
-		A830A1B31E78018800D36718 /* RNScrollPageViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNScrollPageViewManager.m; sourceTree = "<group>"; };
-		A830A1B41E78018800D36718 /* RNScrollPageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNScrollPageItem.h; sourceTree = "<group>"; };
-		A830A1B51E78018800D36718 /* RNScrollPageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNScrollPageItem.m; sourceTree = "<group>"; };
-		A830A1B61E78018800D36718 /* RNScrollPageViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNScrollPageViewManager.h; sourceTree = "<group>"; };
+		A830A2801E793FAC00D36718 /* RNScrollPageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNScrollPageItem.h; path = RNScrollPageView/RNScrollPageItem.h; sourceTree = "<group>"; };
+		A830A2811E793FAC00D36718 /* RNScrollPageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNScrollPageItem.m; path = RNScrollPageView/RNScrollPageItem.m; sourceTree = "<group>"; };
+		A830A2821E793FAC00D36718 /* RNScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNScrollPageView.h; path = RNScrollPageView/RNScrollPageView.h; sourceTree = "<group>"; };
+		A830A2831E793FAC00D36718 /* RNScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNScrollPageView.m; path = RNScrollPageView/RNScrollPageView.m; sourceTree = "<group>"; };
+		A830A2841E793FAC00D36718 /* RNScrollPageViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNScrollPageViewManager.h; path = RNScrollPageView/RNScrollPageViewManager.h; sourceTree = "<group>"; };
+		A830A2851E793FAC00D36718 /* RNScrollPageViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNScrollPageViewManager.m; path = RNScrollPageView/RNScrollPageViewManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +64,12 @@
 		A830A1A91E78015C00D36718 /* RNScrollPageView */ = {
 			isa = PBXGroup;
 			children = (
-				A830A1AA1E78015C00D36718 /* RNScrollPageView.h */,
-				A830A1AB1E78015C00D36718 /* RNScrollPageView.m */,
-				A830A1B41E78018800D36718 /* RNScrollPageItem.h */,
-				A830A1B51E78018800D36718 /* RNScrollPageItem.m */,
-				A830A1B61E78018800D36718 /* RNScrollPageViewManager.h */,
-				A830A1B31E78018800D36718 /* RNScrollPageViewManager.m */,
+				A830A2801E793FAC00D36718 /* RNScrollPageItem.h */,
+				A830A2811E793FAC00D36718 /* RNScrollPageItem.m */,
+				A830A2821E793FAC00D36718 /* RNScrollPageView.h */,
+				A830A2831E793FAC00D36718 /* RNScrollPageView.m */,
+				A830A2841E793FAC00D36718 /* RNScrollPageViewManager.h */,
+				A830A2851E793FAC00D36718 /* RNScrollPageViewManager.m */,
 			);
 			path = RNScrollPageView;
 			sourceTree = "<group>";
@@ -133,9 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A830A1B71E78018800D36718 /* RNScrollPageViewManager.m in Sources */,
-				A830A1AC1E78015C00D36718 /* RNScrollPageView.m in Sources */,
-				A830A1B81E78018800D36718 /* RNScrollPageItem.m in Sources */,
+				A830A2871E793FAC00D36718 /* RNScrollPageView.m in Sources */,
+				A830A2881E793FAC00D36718 /* RNScrollPageViewManager.m in Sources */,
+				A830A2861E793FAC00D36718 /* RNScrollPageItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +265,7 @@
 				A830A1B21E78015C00D36718 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
