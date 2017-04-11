@@ -19,6 +19,14 @@ export default class ScrollBar extends Component {
       }
    }
 
+   componentWillReceiveProps(nextProps) {
+      this.state = {
+         curIndex: nextProps.curIndex,
+      }
+   }
+
+
+
    render() {
       var tabs = this.props.tabs;
       tabs = JSON.parse(tabs);

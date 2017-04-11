@@ -1,10 +1,27 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+##react-native-scrollpageview
 
- 'use strict';
+Native ios UIScrollView Page Enable mode for React Native
+
+- [Installation](#installation)
+- [Examples](#examples)
+
+## Installation
+1. `npm install react-native-scrollpageview --save`
+2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
+3. add `./node_modules/react-native-scrollpageview/RNScrollPageView.xcodeproj`
+4. In the XCode project navigator, select your project, select the `Build Phases` tab and in the `Link Binary With Libraries` section add **libRNScrollPageView.a**
+4. And in the `Build Settings` tab in the `Search Paths/Header Search Paths` section add `$(SRCROOT)/../node_modules/react-native-scrollpageview` (make sure it's recursive).
+6. `import ScrollPageView from 'react-native-scrollpageview'`
+
+## Examples
+
+####snapshot
+![demo-3](https://media.giphy.com/media/xUPGcFfgjDzQUUjcGY/giphy.gif)
+
+###easy to use, please see the code
+
+```
+'use strict';
 import React, { Component } from 'react';
 
 import {
@@ -13,7 +30,6 @@ import {
     NativeModules,
     StyleSheet,
     View,
-
     Text,
     TouchableOpacity,
     requireNativeComponent,
@@ -47,14 +63,13 @@ export default class ScrollPageViewDemo extends Component {
 
             {/**fake test bar*/}
             <ScrollBar style={{height: 40, backgroundColor: '#d5d5d5'}} tabs={JSON.stringify(tabs)} curIndex={this.state.curIndex} onTabChanged={(index)=>{
-                this.setState({
+               this.setState({
                   curIndex: index,
-                })
+               });
             }}>
             </ScrollBar>
 
             <ScrollPageView
-              ref={(scrollPageView)=>this.scrollPageView = scrollPageView}
                style={{flex: 1}}
                curIndex={this.state.curIndex}
                onPageViewDidAppearedAtIndex={(index)=>{
@@ -71,12 +86,12 @@ export default class ScrollPageViewDemo extends Component {
    }
 
    renderPage(value, index) {
-      return (<Page label={value} renderCell='cell1' key={index}></Page>);
+      return (<Page label={value} renderCell='pageRenderCell' key={index}></Page>);
    }
 }
 
 
-class cell1 extends Component {
+class pageRenderCell extends Component {
    render() {
       return (
          <View style={{flex: 1, justifyContent:'center', alignItems: 'center'}}>
@@ -87,5 +102,6 @@ class cell1 extends Component {
 }
 
 AppRegistry.registerComponent('ScrollPageViewDemo', () => ScrollPageViewDemo);
-AppRegistry.registerComponent('cell1', () => cell1);
+AppRegistry.registerComponent('pageRenderCell', () => pageRenderCell);
 AppRegistry.registerComponent('scrollbar', () => scrollbar);
+```
