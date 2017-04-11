@@ -1,6 +1,6 @@
 {
   "name": "react-native-scrollpageview",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Native iOS ScrollPageView wrapper for React Native",
   "main": "index.js",
   "scripts": {
@@ -22,5 +22,6 @@
     "email": "cocoamad@gmail.com",
     "url": "penny.li"
   },
+  "readmeFilename": "README.md",
   "license": "MIT"
 }
