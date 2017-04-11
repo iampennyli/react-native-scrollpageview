@@ -21,7 +21,6 @@
 
 @implementation RNScrollPageView {
 	RCTBridge *_bridge;
-	RCTEventDispatcher *_eventDispatcher;
 	
 	NSMutableDictionary *_pageViewCaches;
 	NSInteger _curIndex;
@@ -36,7 +35,6 @@ RCT_NOT_IMPLEMENTED(-initWithCoder:(NSCoder *)aDecoder)
 	RCTAssertParam(bridge.eventDispatcher);
 
 	if (self = [super initWithFrame: CGRectZero]) {
-		_eventDispatcher = bridge.eventDispatcher;
 		_bridge = bridge;
 		while ([_bridge respondsToSelector:NSSelectorFromString(@"parentBridge")]
 					 && [_bridge valueForKey:@"parentBridge"]) {
@@ -164,6 +162,14 @@ RCT_NOT_IMPLEMENTED(-initWithCoder:(NSCoder *)aDecoder)
 	if (self.onPageViewDidAppearedAtIndex) {
 		self.onPageViewDidAppearedAtIndex(@{@"index": @(_curIndex)});
 	}
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    RCTRootView *view = _pageViewCaches[@(_curIndex)];
+    if (view) {
+        [view cancelTouches];
+    }
 }
 
 

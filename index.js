@@ -60,6 +60,13 @@ var ScrollPageView = React.createClass({
          </View>
       );
    },
+   
+  setPageIndex: function(index) {
+        NativeModules.RNScrollPageViewManager.setPageIndex(
+        findNodeHandle(this.tableView),
+        index
+      );
+   },
 
    _onPageViewDidAppearedAtIndex: function(event) {
       var data = event.nativeEvent;
@@ -72,6 +79,7 @@ ScrollPageView.Page = React.createClass({
    propTypes: {
       label: React.PropTypes.string,
       renderCell: React.PropTypes.string,
+      pageIndex: React.PropTypes.number,
    },
 
    render() {

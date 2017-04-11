@@ -8,6 +8,7 @@
 
 #import "RNScrollPageViewManager.h"
 #import "RNScrollPageView.h"
+#import <React/RCTUIManager.h>
 
 @implementation RNScrollPageViewManager
 
@@ -21,5 +22,18 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_VIEW_PROPERTY(pages, NSArray)
 RCT_EXPORT_VIEW_PROPERTY(curIndex, NSInteger)
 RCT_EXPORT_VIEW_PROPERTY(onPageViewDidAppearedAtIndex, RCTDirectEventBlock)
+
+RCT_EXPORT_METHOD(setPageIndex:(nonnull NSNumber *)reactTag
+                  index:(NSNumber *)index)
+{
+    [self.bridge.uiManager addUIBlock:
+     ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, UIView *> *viewRegistry){
+         RNScrollPageView *view = (RNScrollPageView *)viewRegistry[reactTag];
+         if (![view isKindOfClass:[RNScrollPageView class]]) {
+             RCTLogError(@"Invalid view returned from registry, expecting RNScrollPageViewManager, got: %@", view);
+         }
+         [view setCurIndex: index.integerValue];
+     }];
+}
 
 @end
