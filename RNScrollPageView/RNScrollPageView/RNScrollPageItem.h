@@ -11,4 +11,9 @@
 @interface RNScrollPageItem : NSObject
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *reactRenderCell;
+@property (nonatomic, strong) NSString *data;
+
+@property (nonatomic, assign) BOOL needUpdate; // 需要更新页面
+
+@property (nonatomic, assign) BOOL needDestoryAndRelayout; // 需要重新布局
 @end
