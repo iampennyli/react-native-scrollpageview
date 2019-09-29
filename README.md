@@ -1,4 +1,4 @@
-##react-native-scrollpageview
+## react-native-scrollpageview
 
 Native ios UIScrollView Page Enable mode for React Native
 
@@ -15,11 +15,11 @@ Native ios UIScrollView Page Enable mode for React Native
 
 ## Examples
 
-####snapshot
+#### snapshot
 
 ![demo-3](https://media.giphy.com/media/xUPGcFfgjDzQUUjcGY/giphy.gif)
 
-###easy to use, please see the code
+### Easy to use, please see the code
 
 ```
 'use strict';
@@ -105,4 +105,6 @@ class pageRenderCell extends Component {
 AppRegistry.registerComponent('ScrollPageViewDemo', () => ScrollPageViewDemo);
 AppRegistry.registerComponent('pageRenderCell', () => pageRenderCell);
 AppRegistry.registerComponent('scrollbar', () => scrollbar);
+
+## Lisence
 ```
